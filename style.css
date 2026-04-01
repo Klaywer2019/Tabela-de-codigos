@@ -1,15 +1,15 @@
-/* --- RESET E ESTILOS GERAIS (IGUAL ANTES) --- */
+/* --- RESET E ESTILOS GERAIS (ESTILO NEON VOLTOU) --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #0f0f0f;
-    color: #e0e0e0;
-    padding: 10px; /* Reduzi um pouco o padding pro celular */
+    background-color: #0f0f0f; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro */
+    padding: 10px;
     line-height: 1.6;
 }
 
@@ -19,31 +19,31 @@ header {
 }
 
 h1 { 
-    color: #00d4ff; 
-    font-size: 1.8rem; /* Diminuí um pouco o título principal */
+    color: #00d4ff; /* Ciano Neon */
+    font-size: 1.8rem;
     margin-bottom: 10px;
 }
 
 h2 {
-    color: #00ff88;
+    color: #00ff88; /* Verde Neon */
     margin-bottom: 15px;
     border-left: 4px solid #00ff88;
     padding-left: 10px;
-    font-size: 1.4rem; /* Diminuí o título da tabela */
+    font-size: 1.4rem;
 }
 
-/* --- ESTILIZANDO A TABELA (PADRÃO PARA PC) --- */
+/* --- ESTILIZANDO A TABELA (PC) --- */
 .container-tabela {
-    overflow-x: auto; /* Mantenho isso pra garantir que role se precisar */
+    overflow-x: auto; /* Garante rolagem se necessário */
     border-radius: 12px;
     margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0,212,255,0.2); /* Sombra neon */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    background-color: #1a1a1a;
-    table-layout: auto; /* Deixa o navegador decidir o tamanho das colunas no PC */
+    background-color: #1a1a1a; /* Fundo da tabela */
 }
 
 th {
@@ -57,45 +57,41 @@ th {
 }
 
 td {
-    padding: 12px; /* Diminuí o padding interno */
+    padding: 12px;
     border-bottom: 1px solid #2d2d2d;
     vertical-align: middle;
-    font-size: 0.9rem; /* Fonte um pouco menor nas células */
+    font-size: 0.9rem;
+    word-wrap: break-word; /* Importante para o celular */
 }
 
+/* Destaque para o código */
 code {
     background-color: #2d2d2d;
-    color: #ff79c6;
+    color: #ff79c6; /* Rosa Neon */
     padding: 4px 8px;
     border-radius: 6px;
     font-family: 'Courier New', monospace;
     font-weight: bold;
-    font-size: 0.85rem; /* Código menor no celular */
+    font-size: 0.85rem;
 }
 
 /* --- A MÁGICA DA RESPONSIVIDADE (MEDIA QUERY) --- */
-/* Se a tela tiver menos de 600px de largura (celulares) */
 @media screen and (max-width: 600px) {
-    
-    /* 1. Forçamos colunas fixas pra tabela não espremer o texto */
-    table {
-        table-layout: fixed; 
+    /* Ajustes específicos pro celular */
+    body {
+        padding: 5px; /* Quase sem margem nas bordas */
     }
 
-    /* 2. Definimos larguras específicas pras colunas importantes não sumirem */
-    th:nth-child(1), td:nth-child(1) { width: 30%; } /* Coluna CÓDIGO */
-    th:nth-child(2), td:nth-child(2) { width: 40%; } /* Coluna O QUE FAZ */
-    th:nth-child(3), td:nth-child(3) { width: 30%; } /* Coluna EXEMPLO */
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
 
-    /* 3. Permitimos que o texto dentro das células quebre em várias linhas se necessário */
+    th {
+        font-size: 0.7rem; /* Cabeçalho menor */
+        padding: 8px;
+    }
+
     td {
-        word-wrap: break-word; /* Quebra palavras longas */
-        white-space: normal;  /* Permite quebra de linha normal */
-        padding: 8px; /* Mais apertado no celular */
-    }
-
-    /* 4. Escondemos o efeito de hover no celular (não faz sentido sem mouse) */
-    tr:hover {
-        background-color: transparent;
+        font-size: 0.8rem; /* Texto menor nas células */
+        padding: 6px;
     }
 }
