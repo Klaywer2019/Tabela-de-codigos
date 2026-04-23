@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Docs - Dicionário Dev</title>
+    <style>
+        /* RESET E BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: #0f0f0f; color: #e0e0e0; padding: 0; line-height: 1.6; }
+
+        /* NAVBAR (Menu Fixo) */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #00d4ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-weight: bold;
+            border: 1px solid #00d4ff;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { background-color: #00d4ff; color: #000; }
+        .active { background-color: #00d4ff; color: #000; } /* Pra saber em qual página você está */
+
+        /* CONTEÚDO */
+        header { text-align: center; margin: 40px 0; }
+        h1 { color: #00d4ff; font-size: 2.2rem; }
+        
+        main { padding: 20px; max-width: 900px; margin: 0 auto; }
+        h2 { color: #00ff88; margin: 30px 0 20px 0; border-left: 4px solid #00ff88; padding-left: 10px; }
+
+        /* TABELA */
+        .container-tabela { overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        table { width: 100%; border-collapse: collapse; background-color: #1a1a1a; border: 1px solid #333; }
+        th { background-color: #252525; color: #00d4ff; padding: 15px; text-align: left; border: 1px solid #333; }
+        td { padding: 15px; border: 1px solid #333; vertical-align: middle; font-size: 0.95rem; }
+        code { background-color: #2d2d2d; color: #ff79c6; padding: 4px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="html.html" class="nav-link active">HTML</a>
+        <a href="css.html" class="nav-link">CSS</a>
+    </nav>
+
+    <header>
+        <h1>HTML Documentation 🌐</h1>
+        <p>A estrutura básica da web.</p>
+    </header>
+
+    <main>
+        <h2>Tags Essenciais</h2>
+        <div class="container-tabela">
+            <table>
+                <thead>
+                    <tr><th>Código</th><th>Função</th><th>Exemplo</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><code>&lt;!DOCTYPE html&gt;</code></td><td>Define o documento como HTML5</td><td>-</td></tr>
+                    <tr><td><code>&lt;html&gt;</code></td><td>Elemento raiz da página</td><td>&lt;html&gt;...&lt;/html&gt;</td></tr>
+                    <tr><td><code>&lt;head&gt;</code></td><td>Configurações e metadados</td><td>&lt;head&gt;...&lt;/head&gt;</td></tr>
+                    <tr><td><code>&lt;body&gt;</code></td><td>Conteúdo visível do site</td><td>&lt;body&gt;...&lt;/body&gt;</td></tr>
+                    <tr><td><code>&lt;h1&gt;</code> a <code>&lt;h6&gt;</code></td><td>Títulos e subtítulos</td><td>&lt;h1&gt;Título&lt;/h1&gt;</td></tr>
+                    <tr><td><code>&lt;p&gt;</code></td><td>Parágrafo de texto</td><td>&lt;p&gt;Texto aqui&lt;/p&gt;</td></tr>
+                    <tr><td><code>&lt;a&gt;</code></td><td>Link/Hiperlink</td><td>&lt;a href="#"&gt;Link&lt;/a&gt;</td></tr>
+                    <tr><td><code>&lt;img&gt;</code></td><td>Exibe uma imagem</td><td>&lt;img src="img.jpg"&gt;</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+</html>
