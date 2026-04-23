@@ -3,113 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dicionário Dev - Meu Projeto</title>
-    
+    <title>Dicionário Dev - Início</title>
     <style>
-        /* --- ESTILO NEON EMBUTIDO (NÃO PRECISA DE ARQUIVO CSS EXTERNO) --- */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-
         body { background-color: #0f0f0f; color: #e0e0e0; padding: 20px; line-height: 1.6; }
-
-        header { text-align: center; margin-bottom: 40px; }
+        header { text-align: center; margin-bottom: 20px; }
+        h1 { color: #00d4ff; font-size: 2.2rem; }
         
-        h1 { color: #00d4ff; font-size: 2.2rem; margin-bottom: 10px; }
-        
-        p { color: #888; font-size: 1.1rem; }
+        /* Botões de Navegação */
+        .nav-paginas { text-align: center; margin-bottom: 30px; }
+        .btn-nav { background-color: #00d4ff; color: #0f0f0f; padding: 8px 16px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 5px; display: inline-block; transition: 0.3s; }
+        .btn-nav:hover { background-color: #00ff88; }
 
         h2 { color: #00ff88; margin: 30px 0 20px 0; border-left: 4px solid #00ff88; padding-left: 10px; }
-
-        /* Estilo da Tabela */
         .container-tabela { overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-
-        table {
-            width: 100%;
-            border-collapse: collapse; /* Faz as bordas colarem uma na outra */
-            background-color: #1a1a1a;
-            border: 1px solid #333;
-        }
-
-        th { 
-            background-color: #252525; 
-            color: #00d4ff; 
-            padding: 15px; 
-            text-align: left; 
-            border: 1px solid #333;
-        }
-
-        td {
-            padding: 15px;
-            border: 1px solid #333; /* LINHAS SEPARADORAS */
-            vertical-align: middle;
-            font-size: 0.95rem;
-        }
-
-        /* Destaque para o código */
-        code {
-            background-color: #2d2d2d;
-            color: #ff79c6;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-        }
-
-        /* Responsividade */
-        @media screen and (max-width: 600px) {
-            h1 { font-size: 1.6rem; }
-            th, td { padding: 10px; font-size: 0.85rem; }
-        }
+        table { width: 100%; border-collapse: collapse; background-color: #1a1a1a; border: 1px solid #333; }
+        th { background-color: #252525; color: #00d4ff; padding: 15px; text-align: left; border: 1px solid #333; }
+        td { padding: 15px; border: 1px solid #333; vertical-align: middle; font-size: 0.95rem; }
+        code { background-color: #2d2d2d; color: #ff79c6; padding: 4px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-weight: bold; }
     </style>
 </head>
 <body>
-
     <header>
         <h1>Dicionário de Código 🚀</h1>
-        <p>Aprenda a programar de um jeito fácil e lógico!</p>
+        <p>Aprenda a programar de um jeito fácil!</p>
     </header>
 
+    <nav class="nav-paginas">
+        <a href="index.html" class="btn-nav">Página 1</a>
+        <a href="pagina2.html" class="btn-nav">Página 2 »</a>
+    </nav>
+
     <main>
-        <h2>Tabela: HTML & CSS Inicial</h2>
-        
+        <h2>Tabela: Básico (Página 1)</h2>
         <div class="container-tabela">
             <table>
                 <thead>
-                    <tr>
-                        <th>Código</th>
-                        <th>O que faz?</th>
-                        <th>Exemplo Prático</th>
-                    </tr>
+                    <tr><th>Código</th><th>O que faz?</th><th>Exemplo</th></tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><code>&lt;h1&gt;</code></td>
-                        <td>Cria o título principal da página</td>
-                        <td>&lt;h1&gt;Olá Mundo&lt;/h1&gt;</td>
-                    </tr>
-                    <tr>
-                        <td><code>color</code></td>
-                        <td>Muda a cor do texto no CSS</td>
-                        <td>color: red;</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;img&gt;</code></td>
-                        <td>Coloca uma imagem na página</td>
-                        <td>&lt;img src="foto.jpg"&gt;</td>
-                    </tr>
-                    <tr>
-                        <td><code>&lt;a&gt;</code></td>
-                        <td>Cria um link para outro site</td>
-                        <td>&lt;a href="#"&gt;Link&lt;/a&gt;</td>
-                    </tr>
-                    <tr>
-                        <td><code>background</code></td>
-                        <td>Muda a cor de fundo no CSS</td>
-                        <td>background: black;</td>
-                    </tr>
+                    <tr><td><code>&lt;h1&gt;</code></td><td>Título principal</td><td>&lt;h1&gt;Oi&lt;/h1&gt;</td></tr>
+                    <tr><td><code>color</code></td><td>Cor do texto</td><td>color: red;</td></tr>
+                    <tr><td><code>&lt;img&gt;</code></td><td>Imagem</td><td>&lt;img src="foto.jpg"&gt;</td></tr>
                 </tbody>
             </table>
         </div>
     </main>
-
 </body>
 </html>
