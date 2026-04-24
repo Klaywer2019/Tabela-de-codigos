@@ -16,7 +16,7 @@
             gap: 15px;
             padding: 15px;
             background-color: #1a1a1a;
-            border-bottom: 2px solid #ff00ff; /* Mudança para o tema CSS */
+            border-bottom: 2px solid #ff00ff;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -39,27 +39,25 @@
         header { text-align: center; margin: 40px 0; }
         h1 { color: #ff00ff; font-size: 2.2rem; }
         p { color: #888; font-size: 1.1rem; }
-
         main { padding: 20px; max-width: 900px; margin: 0 auto; }
         h2 { color: #ff00ff; margin: 30px 0 20px 0; border-left: 4px solid #ff00ff; padding-left: 10px; }
 
+        /* EFEITO SANFONA (DETAILS) */
+        details { margin-bottom: 20px; border: 1px solid #ff00ff; border-radius: 8px; background-color: #1a1a1a; }
+        summary { padding: 15px; cursor: pointer; color: #ff00ff; font-weight: bold; list-style: none; outline: none; }
+        summary::-webkit-details-marker { display: none; } /* Remove a setinha padrão */
+        summary:hover { background-color: #252525; }
+        summary::after { content: " ▼"; float: right; }
+        details[open] summary::after { content: " ▲"; }
+
         /* TABELA */
-        .container-tabela { overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        table { width: 100%; border-collapse: collapse; background-color: #1a1a1a; border: 1px solid #333; margin-bottom: 30px; }
+        .container-tabela { overflow-x: auto; border-radius: 0 0 12px 12px; }
+        table { width: 100%; border-collapse: collapse; background-color: #1a1a1a; border: 1px solid #333; }
         th { background-color: #252525; color: #ff00ff; padding: 15px; text-align: left; border: 1px solid #333; }
         td { padding: 15px; border: 1px solid #333; vertical-align: middle; font-size: 0.95rem; }
         code { background-color: #2d2d2d; color: #ff79c6; padding: 4px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-weight: bold; }
         
-        /* Nova classe para exibir a cor em um bloco */
-        .color-block {
-            width: 20px;
-            height: 20px;
-            border-radius: 4px;
-            border: 1px solid #e0e0e0;
-            display: inline-block;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
+        .color-block { width: 20px; height: 20px; border-radius: 4px; border: 1px solid #e0e0e0; display: inline-block; margin-right: 10px; vertical-align: middle; }
     </style>
 </head>
 <body>
@@ -76,51 +74,25 @@
     </header>
 
     <main>
-        <h2>Códigos de Cores Hexadecimais</h2>
-        <div class="container-tabela">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Cor</th>
-                        <th>Código HEX</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #FF0000;"></span> Vermelho</td>
-                        <td><code>#FF0000</code></td>
-                    </tr>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #00FF00;"></span> Verde</td>
-                        <td><code>#00FF00</code></td>
-                    </tr>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #0000FF;"></span> Azul</td>
-                        <td><code>#0000FF</code></td>
-                    </tr>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #FF00FF;"></span> Magenta/Huchsia</td>
-                        <td><code>#FF00FF</code></td>
-                    </tr>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #FFFF00;"></span> Amarelo</td>
-                        <td><code>#FFFF00</code></td>
-                    </tr>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #00FFFF;"></span> Ciano/Aqua</td>
-                        <td><code>#00FFFF</code></td>
-                    </tr>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #FFFFFF;"></span> Branco</td>
-                        <td><code>#FFFFFF</code></td>
-                    </tr>
-                    <tr>
-                        <td><span class="color-block" style="background-color: #000000;"></span> Preto</td>
-                        <td><code>#000000</code></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        
+        <details>
+            <summary>Ver Códigos de Cores Hexadecimais</summary>
+            <div class="container-tabela">
+                <table>
+                    <thead>
+                        <tr><th>Cor</th><th>Código HEX</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><span class="color-block" style="background-color: #FF0000;"></span> Vermelho</td><td><code>#FF0000</code></td></tr>
+                        <tr><td><span class="color-block" style="background-color: #00FF00;"></span> Verde</td><td><code>#00FF00</code></td></tr>
+                        <tr><td><span class="color-block" style="background-color: #0000FF;"></span> Azul</td><td><code>#0000FF</code></td></tr>
+                        <tr><td><span class="color-block" style="background-color: #FF00FF;"></span> Magenta</td><td><code>#FF00FF</code></td></tr>
+                        <tr><td><span class="color-block" style="background-color: #FFFF00;"></span> Amarelo</td><td><code>#FFFF00</code></td></tr>
+                        <tr><td><span class="color-block" style="background-color: #00FFFF;"></span> Ciano</td><td><code>#00FFFF</code></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </details>
         
         <h2>Comandos de Estilo Essenciais</h2>
         <div class="container-tabela">
@@ -135,8 +107,6 @@
                     <tr><td><code>margin</code></td><td>Espaço externo</td><td>margin: 10px;</td></tr>
                     <tr><td><code>padding</code></td><td>Espaço interno</td><td>padding: 10px;</td></tr>
                     <tr><td><code>border</code></td><td>Borda do elemento</td><td>border: 1px solid blue;</td></tr>
-                    <tr><td><code>display</code></td><td>Como o elemento se comporta</td><td>display: flex;</td></tr>
-                    <tr><td><code>position</code></td><td>Posicionamento (absolute/fixed)</td><td>position: sticky;</td></tr>
                 </tbody>
             </table>
         </div>
