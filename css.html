@@ -38,16 +38,28 @@
         /* CONTEÚDO */
         header { text-align: center; margin: 40px 0; }
         h1 { color: #ff00ff; font-size: 2.2rem; }
-        
+        p { color: #888; font-size: 1.1rem; }
+
         main { padding: 20px; max-width: 900px; margin: 0 auto; }
         h2 { color: #ff00ff; margin: 30px 0 20px 0; border-left: 4px solid #ff00ff; padding-left: 10px; }
 
         /* TABELA */
         .container-tabela { overflow-x: auto; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
-        table { width: 100%; border-collapse: collapse; background-color: #1a1a1a; border: 1px solid #333; }
+        table { width: 100%; border-collapse: collapse; background-color: #1a1a1a; border: 1px solid #333; margin-bottom: 30px; }
         th { background-color: #252525; color: #ff00ff; padding: 15px; text-align: left; border: 1px solid #333; }
         td { padding: 15px; border: 1px solid #333; vertical-align: middle; font-size: 0.95rem; }
         code { background-color: #2d2d2d; color: #ff79c6; padding: 4px 8px; border-radius: 4px; font-family: 'Courier New', monospace; font-weight: bold; }
+        
+        /* Nova classe para exibir a cor em um bloco */
+        .color-block {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            border: 1px solid #e0e0e0;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -59,11 +71,57 @@
     </nav>
 
     <header>
-        <h1>CSS Documentation 🎨</h1>
-        <p>Estilizando a web com lógica.</p>
+        <h1>CSS Documentation</h1>
+        <p>🎨 Estilizando a web com lógica.</p>
     </header>
 
     <main>
+        <h2>Códigos de Cores Hexadecimais</h2>
+        <div class="container-tabela">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cor</th>
+                        <th>Código HEX</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #FF0000;"></span> Vermelho</td>
+                        <td><code>#FF0000</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #00FF00;"></span> Verde</td>
+                        <td><code>#00FF00</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #0000FF;"></span> Azul</td>
+                        <td><code>#0000FF</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #FF00FF;"></span> Magenta/Huchsia</td>
+                        <td><code>#FF00FF</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #FFFF00;"></span> Amarelo</td>
+                        <td><code>#FFFF00</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #00FFFF;"></span> Ciano/Aqua</td>
+                        <td><code>#00FFFF</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #FFFFFF;"></span> Branco</td>
+                        <td><code>#FFFFFF</code></td>
+                    </tr>
+                    <tr>
+                        <td><span class="color-block" style="background-color: #000000;"></span> Preto</td>
+                        <td><code>#000000</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
         <h2>Comandos de Estilo Essenciais</h2>
         <div class="container-tabela">
             <table>
