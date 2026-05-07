@@ -7,14 +7,15 @@
     <style>
         /* BASE E ESTILO NEON */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: #0f0f0f; color: #e0e0e0; padding: 0; line-height: 1.6; }
+        body { background-color: #0f0f0f; color: #e0e0e0; line-height: 1.6; }
 
-        /* NAVBAR (Menu Fixado) */
+        /* NAVBAR RESPONSIVA */
         .navbar {
             display: flex;
             justify-content: center;
-            gap: 15px;
-            padding: 20px;
+            flex-wrap: wrap; /* Faz o menu não bugar no celular */
+            gap: 10px;
+            padding: 15px;
             background-color: #1a1a1a;
             border-bottom: 2px solid #00d4ff;
             position: sticky;
@@ -25,11 +26,13 @@
         .nav-link {
             color: #fff;
             text-decoration: none;
-            padding: 10px 20px;
+            padding: 8px 15px;
+            font-size: 14px;
             font-weight: bold;
             border: 1px solid #00d4ff;
             border-radius: 8px;
             transition: 0.3s;
+            white-space: nowrap; /* Não deixa o texto do botão quebrar */
         }
 
         .nav-link:hover { background-color: #00d4ff; color: #0f0f0f; }
@@ -50,9 +53,8 @@
         <a href="index.html" class="nav-link active">Home</a>
         <a href="html.html" class="nav-link">HTML</a>
         <a href="css.html" class="nav-link">CSS</a>
-<a href="js.html" class="nav-link">JS</a>
-    <a href="python.html" class="nav-link">Python</a>
-</nav>
+        <a href="js/js.html" class="nav-link">JS</a>
+        <a href="python/python.html" class="nav-link">Python</a>
     </nav>
 
     <header>
